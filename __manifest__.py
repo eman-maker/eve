@@ -1,35 +1,19 @@
-# -*- coding: utf-8 -*-
+# Copyright 2022 Moka Tourisme (https://www.mokatourisme.fr).
+# @author Iván Todorovich <ivan.todorovich@gmail.com>
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+
 {
-    'name': "limited",
-
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
-
-    'description': """
-        Long description of module's purpose
-    """,
-
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
-
-    # any module necessary for this one to work correctly
-    'depends': ['base', 'website_event'],
-
-    # always loaded
-    'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
+    "name": "Event Registration QR Code",
+    "summary": "Automatically generate unique QR Codes for each registration",
+    "version": "15.0.1.0.0",
+    "author": "Moka Tourisme, Odoo Community Association (OCA)",
+    "maintainers": ["ivantodorovich"],
+    "website": "https://github.com/OCA/event",
+    "license": "AGPL-3",
+    "category": "Marketing",
+    "depends": ["event"],
+    "data": [
+        "views/event_registration.xml",
+        "reports/report_templates.xml",
     ],
 }
